@@ -1,19 +1,16 @@
 import './App.css';
 
 function App() {
-  const age = 15;
-  if (age >= 18) {
-    return (
-      <h1>OVER AGE</h1>
-    );
-  }
-  else {
-    return (
-      <div className = "App">
-        <h1>UNDER AGE</h1>
+  const age = 17;
+  const isGreen = true;
+
+    return ( <div className="App">
+        {age >= 18 ? <h1>OVER AGE</h1> : <h1>UNDER AGE</h1>}
+        <h1 style={{ color: isGreen ? "green" : "red" }}>THIS HAS COLOR</h1>
+
+        {isGreen && <button>THIS IS BUTTON</button>}
       </div>
-    )
-  }
+    );
 }
 
 
